@@ -1,5 +1,7 @@
-@import "compass/reset"
-@import "bootstrap"
+@import compass/reset
+@import fonts
+@import compass/utilities/general/clearfix
+//@import "compass/css3/columns"
 
 $color-violet 	: #9C6FE7
 $color-white 	: #fff
@@ -10,102 +12,87 @@ $muller 		: "Muller"
 $muller_black	: "Muller Black"
 $muller_regular	: "Muller Regular"
 
-$font_1: "Muller Black Italic"
-$font_2: "Muller Bold"
-$font_3: "Muller Bold Italic"
-$font_4: "Muller Extrabold"
-$font_5: "Muller Extrabold Italic"
-$font_6: "Muller Hairline Italic"
-$font_7: "Muller Hairline"
-$font_8: "Muller Heavy"
-$font_9: "Muller Heavy Italic"
-$font_10: "Muller Light"
-$font_11: "Muller Light Italic"
-$font_12: "Muller Medium"
-$font_13: "Muller Medium Italic"
-$font_15: "Muller Regular Italic"
-$font_16: "Muller Thin"
-$font_17: "Muller Thin Italic"
-$font_18: "Muller Ultralight"
-$font_19: "Muller Ultralight Italic"
-
 html , body
 	height : 100%
 	width : 100%
 
+html
+	font-size: 62.5%
+
 body
-	font-family 	: "Arial"
+	font 		: normal normal 300 1.25rem/1.5 $muller_regular
+	font-size 	: 14pt
+
+h1
+	font-size : 32pt
 
 // Buttons
 .mi-button-default
+	background 		: none
 	border-radius 	: 24px
-	border-width 	: 4px
-	font-weight 	: 800
-	border-color 	: $color-violet
+	border 			: 4px solid $color-violet
+	font-size 		: 16pt
 	color 			: $color-violet
+	padding 		: 8px 16px
 
 nav
-	@extend .container-fluid
-	@include make-row()
 	margin 		: 0
 	padding 	: 16px 32px
 	text-align	: right
 
 main
-	@extend .container-fluid
 	height : 100%
 
-section	
-	@include make-row()
-
+section
 	article
 		height 			: 100%
+
 
 section.page-one
 	height			: 100%
 	text-align 		: center
 
 	article
-		@include make-xs-column(12)
 		background 		: url('../images/first_section_down.svg') no-repeat bottom
 		background-size : contain
 
 	img
 		width 		: 80px
-		margin-top 	: 80px
+		margin-top 	: 10%
 
 	h1
 		color 	: $color-violet
 
 	button
-		margin-top : 80px
+		margin-top 		: 40px
+		margin-bottom	: 40px 
 
 section.page-two
 	background 	: $color-violet
 	color 		: $color-white
-	font-family	: Muller Regular
 	padding 	: 64px
+	+columns(2)
 
 	article
-		@include make-xs-column(6)
+		display	: inline-block
+		width 	: 100%
 
 	article:first-child
 		text-align 		: right
-		padding-right 	: 24px
+		img
+			width 			: 70%
+			margin-right 	: 72px 
 
 	article:last-child
 		text-align 	: left
-		padding-top : 160px
+		padding-top : 24%
 
 		p
-			margin-top 	: 20px
+			margin-top 	: 16px
 
 section.page-three
+	padding 	: 64px
 	text-align 	: center
-
-	p
-		width : 50%
-		margin: auto
 
 	img
 		margin-top : 56px
@@ -114,7 +101,6 @@ section.page-four
 	background : $color-graywhite
 
 	article
-		@include make-xs-column(12)
 		text-align 		: center
 		padding-top 	: 54px
 		padding-bottom 	: 54px
@@ -122,3 +108,9 @@ section.page-four
 		p
 			width 	: 50%
 			margin 	: auto
+
+.app-store-links
+	margin 	: 24px 0px 
+	
+	a:not(:first-child)
+		margin-left: 8px
