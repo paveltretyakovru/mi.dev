@@ -1,6 +1,37 @@
+@import "compass/reset"
 @import "bootstrap"
 
 $color-violet : #9C6FE7
+
+// Fonts
+$muller 		: "Muller"
+$muller_black	: "Muller Black"
+$font_1: "Muller Black Italic"
+$font_2: "Muller Bold"
+$font_3: "Muller Bold Italic"
+$font_4: "Muller Extrabold"
+$font_5: "Muller Extrabold Italic"
+$font_6: "Muller Hairline Italic"
+$font_7: "Muller Hairline"
+$font_8: "Muller Heavy"
+$font_9: "Muller Heavy Italic"
+$font_10: "Muller Light"
+$font_11: "Muller Light Italic"
+$font_12: "Muller Medium"
+$font_13: "Muller Medium Italic"
+$font_14: "Muller Regular"
+$font_15: "Muller Regular Italic"
+$font_16: "Muller Thin"
+$font_17: "Muller Thin Italic"
+$font_18: "Muller Ultralight"
+$font_19: "Muller Ultralight Italic"
+
+html , body
+	height : 100%
+	width : 100%
+
+body
+	font-family 	: $muller
 
 // Buttons
 .mi-button-default
@@ -13,18 +44,36 @@ $color-violet : #9C6FE7
 nav
 	@extend .container-fluid
 	@include make-row()
+	margin 		: 0
 	padding 	: 16px 32px
 	text-align	: right
 
 main
 	@extend .container-fluid
+	height : 100%
 
-	section
-		@include make-row()
+section	
+	@include make-row()
 
-	section.page-first
-		article
-			@include make-xs-column(6)
+section.page-one
+	height			: 100%
+	text-align 		: center
 
-	section.page-two
-		background: $color-violet
+	article
+		@include make-xs-column(12)
+		background 		: url('../images/first_section_down.svg') no-repeat bottom
+		background-size : contain
+		height 			: 100%
+
+	img
+		width 		: 80px
+		margin-top 	: 80px
+
+	h1
+		color 	: $color-violet
+
+	button
+		margin-top : 80px
+
+section.page-two
+	background 	: $color-violet

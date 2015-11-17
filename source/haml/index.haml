@@ -3,17 +3,24 @@
 	%head
 		%meta{ :content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type" }
 		%title= "Mimicra"
+		%link{ :rel => "stylesheet" , :type => "text/css" , :href => "css/fonts.css" }
 		%link{ :rel => "stylesheet" , :type => "text/css" , :href => "css/mi.css" }
 	%body
 		%nav
-			%button.btn.btn-default.mi-button-default{ :type => "button" }
-				Информация для заведений
+			%button.btn.btn-default.mi-button-default{ :type => "button" } Информация для заведений
 
 		%main			
 			%section.page-one
-				%article 1 section 1 article				
+				%article
+					%img{:src => "/images/logo.svg"}
+					%h1 MIMICRA
+					%p Твои бонусы ждут тебя
+					%button.btn.btn-default.mi-button-default{ :type => "button" }
+						Хочу скидки
 			%section.page-two
-				%article 2 section 1 article
+				%article
+					%img{:src => "/images/section_2_phones.png"}
+					2 section 1 article
 			%section.page-three
 				%article 3 section 1 article
 			%section.page-four
