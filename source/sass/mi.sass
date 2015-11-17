@@ -1,11 +1,15 @@
 @import "compass/reset"
 @import "bootstrap"
 
-$color-violet : #9C6FE7
+$color-violet 	: #9C6FE7
+$color-white 	: #fff
+$color-graywhite: #F8F8F8
 
 // Fonts
 $muller 		: "Muller"
 $muller_black	: "Muller Black"
+$muller_regular	: "Muller Regular"
+
 $font_1: "Muller Black Italic"
 $font_2: "Muller Bold"
 $font_3: "Muller Bold Italic"
@@ -19,7 +23,6 @@ $font_10: "Muller Light"
 $font_11: "Muller Light Italic"
 $font_12: "Muller Medium"
 $font_13: "Muller Medium Italic"
-$font_14: "Muller Regular"
 $font_15: "Muller Regular Italic"
 $font_16: "Muller Thin"
 $font_17: "Muller Thin Italic"
@@ -31,7 +34,7 @@ html , body
 	width : 100%
 
 body
-	font-family 	: $muller
+	font-family 	: "Arial"
 
 // Buttons
 .mi-button-default
@@ -55,6 +58,9 @@ main
 section	
 	@include make-row()
 
+	article
+		height 			: 100%
+
 section.page-one
 	height			: 100%
 	text-align 		: center
@@ -63,7 +69,6 @@ section.page-one
 		@include make-xs-column(12)
 		background 		: url('../images/first_section_down.svg') no-repeat bottom
 		background-size : contain
-		height 			: 100%
 
 	img
 		width 		: 80px
@@ -77,3 +82,43 @@ section.page-one
 
 section.page-two
 	background 	: $color-violet
+	color 		: $color-white
+	font-family	: Muller Regular
+	padding 	: 64px
+
+	article
+		@include make-xs-column(6)
+
+	article:first-child
+		text-align 		: right
+		padding-right 	: 24px
+
+	article:last-child
+		text-align 	: left
+		padding-top : 160px
+
+		p
+			margin-top 	: 20px
+
+section.page-three
+	text-align 	: center
+
+	p
+		width : 50%
+		margin: auto
+
+	img
+		margin-top : 56px
+
+section.page-four
+	background : $color-graywhite
+
+	article
+		@include make-xs-column(12)
+		text-align 		: center
+		padding-top 	: 54px
+		padding-bottom 	: 54px
+
+		p
+			width 	: 50%
+			margin 	: auto
