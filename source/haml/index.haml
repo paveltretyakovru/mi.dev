@@ -6,9 +6,6 @@
 		%link{ :rel => "stylesheet" , :type => "text/css" , :href => "css/fonts.css" }
 		%link{ :rel => "stylesheet" , :type => "text/css" , :href => "css/mi.css" }
 
-		-# Plugin leve
-		-# %link{ :rel => "stylesheet" , :type => "text/css" , :href => "css/font-awesome/font-awesome.css" }
-
 	%body
 		%nav
 			%button.btn.btn-default.mi-button-default{ :type => "button" }Информация для заведений
@@ -84,9 +81,11 @@
 
 		%footer
 			%aside
-				%p Copyright &copy; 2015 CPDBBK ALL RIGHTS RESERVED
 				%img{:src => "/images/footer_logo.png"}
+				%p Copyright &copy; 2015 CPDBBK ALL RIGHTS RESERVED
 			%aside
-				%p
-					%i.fa.fa-github
-					Информация для заведений
+				%a{:href => "#"}
+					%i.fa.fa-twitter
+				%a.link-facebook{:href => "#"}
+					%i.fa.fa-facebook
+				%p Информация для заведений
