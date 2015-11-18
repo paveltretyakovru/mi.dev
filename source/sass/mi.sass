@@ -80,8 +80,8 @@ section.page-two
 	article:first-child
 		text-align 		: right
 		img
-			width 			: 100%
-			// margin-right 	: 72px 
+			height		: 100%
+			margin-right 	: 72px 
 	article:last-child
 		text-align 	: left
 		padding-top : 24%
@@ -97,11 +97,18 @@ section.page-three
 		img
 			width 			: 24%
 			vertical-align 	: top
+	p
+		width 	: 50%
+		margin 	: auto
 
 section.page-four
 	background : $color-graywhite
 	img
 		width : 70%
+
+	p
+		width 	: 50%
+		margin 	: auto
 
 section.page-five
 	+columns(2)
@@ -151,42 +158,48 @@ section.page-six
 			text-align	: left  
 
 footer
-	+columns(2)
 	color 		: $color-white
 	background 	: rgb(125, 89, 185)
-	padding 	: 32px
-	
-	aside
-		display 	: inline-block
-		width 		: 100%
-	p 
-		margin-top: 16px
-	a
-		font-size 		: 24pt
-		vertical-align 	: middle
-		margin-left 	: 16px
-		margin-top  	: 8px 
-		color 			: $color-white
-		text-decoration : none 
-		float 			: right
-		padding-left 	: 16px
+	padding 	: 32px 0px
 
-	.link-facebook
-		border-left	: 1px solid $color-white
-		padding-left: 32px
-		margin-left	: 32px 
+	img
+		height : 40px
 	
-	aside:first-child
-		text-align: left		
-		p
-			float		 : left
-			margin-left	 : 8px
-		img
-			float 		 : left
-	aside:last-child
-		text-align 		: right		
-		p
-			float 	: right
+	li
+		float 		: left
+		text-align 	: center
+
+	a 
+		color 	: $color-white
+
+	li
+		padding-top : 10px
+	ul
+		+clearfix()
+
+	.footer-logo
+		width : 5%
+	.footer-copy
+		width 		: 35%
+		text-align 	: left
+	.footer-info
+		width 			: 50%
+		text-align 		: right
+		padding-right 	: 16px
+	.footer-link-facebook
+		width 			: 4%
+		border-left 	: 1px solid #fff
+	.footer-link-twitter
+		width : 4%
+
+	.footer-logo , .footer-link-facebook , .footer-link-twitter
+		padding-top 	: 0px
+	
+	.footer-link-facebook , .footer-link-twitter
+		font-size 		: 24pt
+
+
+
 
 .app-store-links
 	margin 	: 24px 0px 

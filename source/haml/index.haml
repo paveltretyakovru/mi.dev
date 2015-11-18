@@ -75,12 +75,16 @@
 						%img{:src => "/images/section_2_apple_store.png"}
 
 		%footer
-			%aside
-				%img{:src => "/images/footer_logo.png"}
-				%p Copyright &copy; 2015 CPDBBK ALL RIGHTS RESERVED
-			%aside
-				%a{:href => "#"}
-					%i.fa.fa-twitter
-				%a.link-facebook{:href => "#"}
-					%i.fa.fa-facebook
-				%p Информация для заведений
+			%ul
+				%li.footer-logo
+					%img{:src => "/images/footer_logo.png"}
+				%li.footer-copy
+					%p Copyright &copy; 2015 CPDBBK ALL RIGHTS RESERVED
+				%li.footer-info
+					%p Информация для заведений
+				%li.footer-link-facebook
+					%a.link-facebook{:href => "#"}
+						%i.fa.fa-facebook
+				%li.footer-link-twitter
+					%a{:href => "#"}
+						%i.fa.fa-twitter
