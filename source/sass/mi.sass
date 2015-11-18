@@ -146,17 +146,22 @@ section.page-six
 			text-align	: left  
 
 footer
-	color 	: $color-white
-	@extend section
-	background: rgb(125, 89, 185)
 	+columns(2)
-	article		
-		padding : 32px 0px
-		display	: inline-block
-	article:first-child
-		text-align 	: right 
-	article:last-child
-		text-align 	: right
+	color 		: $color-white
+	background 	: rgb(125, 89, 185)
+	padding 	: 32px
+
+	aside
+		display 	: inline-block
+		width 		: 100%  
+	aside:first-child
+		text-align: right
+		p
+			float		 : right
+			margin-left	 : 8px 
+
+	p 
+		margin-top: 16px
 
 .app-store-links
 	margin 	: 24px 0px 
