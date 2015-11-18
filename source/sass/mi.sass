@@ -45,17 +45,16 @@ nav
 
 section
 	text-align 		: center
+	background-size : contain
 
 	article
 		padding-top 	: 64px
 		padding-bottom 	: 64px
-		display			: inline-block
 		width 			: 100%
 
 section.page-one
 	height 			: 100%
 	background 		: url('../images/first_section_down.svg') no-repeat bottom
-	background-size : contain
 	article
 		padding-top	: 10%
 	img
@@ -70,11 +69,13 @@ section.page-one
 section.page-two
 	background 	: $color-violet
 	color 		: $color-white
-	+columns(2)		
+	+columns(2)
+	article		
+		display			: inline-block
 	article:first-child
 		text-align 		: right
 		img
-			width 			: 70%
+			width 			: 80%
 			margin-right 	: 72px 
 	article:last-child
 		text-align 	: left
@@ -94,10 +95,68 @@ section.page-three
 
 section.page-four
 	background : $color-graywhite
-	article
+	img
+		width : 70%
+
+section.page-five
+	+columns(2)
+	img
+		width : 80%
+	article		
+		display			: inline-block
+	article:first-child
+		text-align 		: right
+		img
+			width 			: 80%
+			margin-right 	: 72px 
+	article:last-child
+		text-align 	: left
+		padding-top : 40%
 		p
-			width 	: 50%
-			margin 	: auto
+			margin-top 	: 16px
+			width 		: 80%
+
+section.page-six
+	background: url('..//images/section_6_map.jpg')
+	padding-top 	: 64px
+	article:first-child
+		width			: 24%
+		margin-left		: 8%
+		margin-bottom 	: 64px
+		padding 		: 40px
+		background 		: $color-white
+		img
+			width 	: 100%
+		h3
+			font-weight	: bold
+			padding 	: 16px
+			padding-top	: 0px
+	article:last-child
+		color 		: $color-white
+		background 	: $color-violet
+		padding 	: 0px 0px
+		+columns(2)
+		aside
+			width 	: 100%
+			display : inline-block
+		aside:first-child
+			margin-top	: 48px
+			text-align 	: right
+		aside:last-child
+			text-align	: left  
+
+footer
+	color 	: $color-white
+	@extend section
+	background: rgb(125, 89, 185)
+	+columns(2)
+	article		
+		padding : 32px 0px
+		display	: inline-block
+	article:first-child
+		text-align 	: right 
+	article:last-child
+		text-align 	: right
 
 .app-store-links
 	margin 	: 24px 0px 
